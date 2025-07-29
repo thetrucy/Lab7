@@ -21,11 +21,6 @@ public:
 
     virtual double calculateSalary() const = 0;
     virtual string getPersonnelType() const = 0;
-    virtual void displaySpecificInfo() const = 0;
-    
-
-    virtual void displayInfo() const;
-    virtual void inputInfo();
 
     string getFullName() const;
     string getDateOfBirth() const;
@@ -55,9 +50,7 @@ public:
 
     double calculateSalary() const override;
     string getPersonnelType() const override { return "Doctor"; }
-    void displaySpecificInfo() const override;
-    void inputInfo() override;
-    
+
     int getYearsOfExperience() const { return yearsOfExperience; }
     string getSpecialty() const { return specialty; }
     int getWeeklyConsultations() const { return weeklyConsultations; }
@@ -80,12 +73,9 @@ public:
 
     double calculateSalary() const override;
     string getPersonnelType() const override { return "Nurse"; }
-    void displaySpecificInfo() const override;
-    void inputInfo() override;
 
     int getDailyPatientCare() const { return dailyPatientCare; }
     
-
     void setDailyPatientCare(int care) { dailyPatientCare = care; }
 
     friend ostream& operator << (ostream& os, const Nurse &n);
@@ -105,9 +95,6 @@ public:
 
     double calculateSalary() const override;
     string getPersonnelType() const override { return "Technician"; }
-    void displaySpecificInfo() const override;
-    void inputInfo() override;
-    
 
     void addEquipment(const string& equipmentCode);
     void removeEquipment(const string& equipmentCode);
@@ -138,10 +125,7 @@ public:
 
     double calculateSalary() const override;
     string getPersonnelType() const override { return "Administrative Staff"; }
-    void displaySpecificInfo() const override;
-    void inputInfo() override;
     
-
     int getWorkExperience() const { return workExperience; }
     int getMonthlyProcessedDocuments() const { return monthlyProcessedDocuments; }
 
