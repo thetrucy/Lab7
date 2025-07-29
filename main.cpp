@@ -124,7 +124,7 @@ void HospitalHR::displayAllStaff() const {
     
     Node* current = phead;
     while (current != nullptr) {
-        current->staff->displayInfo();
+        cout << *current->staff;
         cout << string(40, '-') << endl;
         current = current->pnext;
     }
@@ -137,7 +137,7 @@ void HospitalHR::displayStaffByType(const string& type) const {
     Node* current = phead;
     while (current != nullptr) {
         if (current->staff->getPersonnelType() == type) {
-            current->staff->displayInfo();
+            cout << *current->staff;
             cout << string(40, '-') << endl;
             found = true;
         }
